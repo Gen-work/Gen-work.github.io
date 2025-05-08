@@ -29,9 +29,9 @@ a:hover { text-decoration: underline; }
   .nav-links {
     display: flex;              /* 内部使用 Flex 排列链接 */
     gap: 1em;                   /* 每个链接之间的间距 */
-    max-width: 600px;           /* 链接区域最大宽度不超过 600px */
+    max-width: 500px;           /* 链接区域最大宽度不超过 600px */
     flex: 1;                    /* 让链接区域尽可能占据剩余空间 */
-    justify-content: flex-end; /* 链接在右边排列 */
+    justify-content: flex-start; /* 链接在右边排列 */
   }
 
   /* 每一个链接的样式 */
