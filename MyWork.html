@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My work &middot; Gen'work</title>
+    <link rel="stylesheet" href="./css/onlycss.css" type="text/css" />
+    <style>
+
+     </style>
+        
+ </head>
+        
+          <body>
+            <div id="navigation">
+              <a href="./index.html"> <img src="./Images/GenChoLogoSample.png" alt="Gen'work" width="88" height="88" align="middle"/>  </a>
+              <div class="nav-links">
+                <a href="./AboutMe.html">About me</a> &middot;
+                <a href="./MyWork.html">My work</a> &middot;
+                <a href="./SideWork.html">Side work</a> &middot;
+                <a href="./ContactMe.html">Contact me</a>
+              </div>
+            </div>
+
+
+    <h1>&nbsp;&nbsp;&nbsp;My Work</h1>
+    <p>Here is something I coded.</p>
+
+    <nav>
+        <h2 id="menu">Menu</h2>
+        <ul>
+          <li><a href="#this">Html - This Site</a></li>
+          <li><a href="#jvm">Java - Vending Machine</a></li>
+          <li><a href="#jac">Java - Array counter</a></li>
+        </ul>
+      </nav>
+
+      <h2 id="this">HTML - This Site</h2>
+
+      <figure style="float: left; margin-right: 20px;">
+        <img src="./Images/DraftThisSite.jpg" alt="the diagram of this site" width="100%" height="100%" >
+        <figcaption style="font-style: italic; color: gray; text-align: center;"> Draft for This Site</figcaption>
+    </figure>
+      <p>It is a simple home page coded by HTML.</p>
+      <p>Here is my diagram for this project.</p>
+  
+  
+
+    <h2 id="jvm">Java - Vending machine</h2>
+    <figure style="float: left; margin-right: 20px;">
+        <img src="./Images/ExampleJAC.png" alt=" Vending machine example pic" width="200" height="200" >
+        <figcaption style="font-style: italic; color: gray; text-align: center;"> Vending machine example</figcaption>
+    </figure>
+    <p>It is a simple vending machine program with well document.</p>
+
+    <pre><code class="language-java">
+        import java.util.Scanner;
+        
+        public class IsBillPaid {
+            public static void main(String[] args) {
+        
+                int goodsNO[][] = new int[3][4];//自販機の商品リストを作成
+        
+                goodsNO[0][0] = 1;
+                goodsNO[0][1] = 100;
+                goodsNO[0][2] = 500;
+                goodsNO[0][3] = 1000;
+                goodsNO[1][0] = 5000;
+                goodsNO[1][1] = 10000;
+
+                //自販機の商品値段を指定
+        
+                Scanner sc = new Scanner(System.in);
+                int row = -1;
+                int column = -1;
+        
+                while (true) {
+                    System.out.print("商品番号の行番号入力：");
+                    row = sc.nextInt();
+        
+                    if (row < goodsNO.length) {//入力問題ないでしたら
+                        break;
+                    } else {
+                        System.out.print("番号がない、やり直してください！");
+                        //エラーメッセージを提示、入力再度リクエスト
+                    }
+                }
+        
+                while (true) {
+                    System.out.print("商品番号の列番号入力：");
+                    column = sc.nextInt();
+        
+                    if (column < goodsNO[0].length) {//入力問題ないでしたら
+                        break;
+                    } else {
+                        System.out.print("番号がない、やり直してください！");
+                        //エラーメッセージを提示、入力再度リクエスト
+                    }
+                }
+        
+                System.out.println("あなたの選んだ商品番号は：" + row + " " + column);
+                int price = goodsNO[row][column];
+                System.out.println(goodsNO[row][column] + "円を投入してください。");
+        
+                System.out.print("お支払い金額入力：");
+                int money = sc.nextInt();
+        
+                if (price > money) {
+                    System.out.print("購入失敗");
+                } else if (price == money) {
+                    System.out.print("購入完了、お釣りなし");
+                } else {
+                    int change = money - price;
+                    System.out.println("購入完了、お釣りは" + change + "円");
+        
+                    if (change >= 5000) {
+                        System.out.println("五千円札" + change / 5000 + "枚");
+                        change %= 5000;
+                    }
+                    if (change >= 1000) {
+                        System.out.println("千円札" + change / 1000 + "枚");
+                        change %= 1000;
+                    }
+                    if (change >= 500) {
+                        System.out.println("500円コイン" + change / 500 + "枚");
+                        change %= 500;
+                    }
+                    if (change >= 100) {
+                        System.out.println("100円コイン" + change / 100 + "枚");
+                        change %= 100;
+                    }
+                    if (change >= 50) {
+                        System.out.println("50円コイン" + change / 50 + "枚");
+                        change %= 50;
+                    }
+                    if (change >= 10) {
+                        System.out.println("10円コイン" + change / 10 + "枚");
+                        change %= 10;
+                    }
+                    if (change >= 5) {
+                        System.out.println("5円コイン" + change / 5 + "枚");
+                        change %= 5;
+                    }
+                    if (change >= 1) {
+                        System.out.println("1円コイン" + change + "枚");
+                    }
+        
+                }
+        
+                sc.close();
+        
+            }
+        }
+    }
+}</code></pre>
+
+<a href="#menu">Back to menu</a>
+
+    <h2 id="jac">Java - Array counter</h2>
+    <figure style="float: left; margin-right: 20px;">
+        <img src="./Images/ExampleJAC.png" alt="Array counter example pic" width="200" height="200" >
+        <figcaption style="font-style: italic; color: gray; text-align: center;"> Array counter example</figcaption>
+    </figure>
+    <p>It is a simple program to count the number of elements in a 3D array.</p>
+    <p>Also well documented. Free to copy and test on your desktop.</p>
+
+    <pre><code class="language-java">
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
+
+public class LoopTest {
+
+	public static void main(String[] args) {
+
+		Random rand = new Random();
+		//乱数クリエイターを作る
+
+		int xSize = rand.nextInt(9) + 1, ySize = rand.nextInt(9) + 1, zSize = rand.nextInt(9) + 1;
+		//先に、3D配列のサイズを変数で指定する；
+		System.out.println(String.format("[%d][%d][%d]", xSize, ySize, zSize));
+
+		long[][][] array3D = new long[xSize][ySize][zSize];
+		//長整数型三次元配列array3Dを宣言する。
+		//その長さは、先に宣言した変数で決める。
+
+		for (int x = 0; x < xSize; x++) {
+			for (int y = 0; y < ySize; y++) {
+				for (int z = 0; z < zSize; z++) {
+					//或る０から始まる変数ｘｙｚを
+					array3D[x][y][z] //3D配列array3Dのインデックスに代入する
+							= rand.nextInt(1000); // 0〜999 のランダム
+				}
+			}
+		}
+
+		long max = Long.MIN_VALUE;
+		String maxIndex = "";
+
+		for (int counterX = 0; counterX < array3D.length; counterX++) {//
+
+			for (int counterY = 0; counterY < array3D[0].length; counterY++) {
+
+				for (int counterZ = 0; counterZ < array3D[0][0].length; counterZ++) {
+
+					if (array3D[counterX][counterY][counterZ] > max) {
+						max = array3D[counterX][counterY][counterZ];
+						maxIndex = String.format("[%d][%d][%d]", counterX, counterY, counterZ);
+					}
+
+					System.out.println("[" + counterX + "][" + counterY + "][" + counterZ + "] = "
+							+ array3D[counterX][counterY][counterZ]);
+
+				}
+
+			}
+
+		}
+
+		System.out.println("最大値は" + maxIndex + "にいる" + max + "です。");
+
+		System.out.println('\n' + "拡張forで再検証：\n");
+
+		long maxCheck = Long.MIN_VALUE;
+		String currentIndex = "";
+		String maxIndexCheck = "";
+
+		int counterXCheck = 0, counterYCheck = 0, counterZCheck = 0;
+
+		for (long[][] array2D : array3D) {
+			for (long[] array1D : array2D) {
+				for (long arrayElement : array1D) {
+
+					currentIndex = String.format("[%d][%d][%d]", counterXCheck, counterYCheck, counterZCheck);
+					System.out.print(currentIndex);
+					System.out.println(" = " + arrayElement);
+
+					counterZCheck++;
+					if (counterZCheck == (int) array3D[counterXCheck][counterYCheck].length) {
+						counterZCheck = 0;
+
+						counterYCheck++;
+						if (counterYCheck == (int) array3D[counterXCheck].length) {
+							counterYCheck = 0;
+
+							counterXCheck++;
+							if (counterXCheck == (int) array3D.length) {
+								counterXCheck = 0;
+
+							}
+
+						}
+
+					}
+
+					if (arrayElement > maxCheck) {
+						maxCheck = arrayElement;
+						maxIndexCheck = currentIndex;
+
+					}
+
+				}
+
+			}
+		}
+		System.out.println('\n' + "拡張forで再検証の最大値は" + maxIndexCheck + "にいる" + maxCheck + "です。");
+
+		// 正确构造 List<List<List<Integer>>>
+		List<List<List<Integer>>> list3D = new ArrayList<>();
+
+		for (long[][] array2D : array3D) {
+			List<List<Integer>> list2D = new ArrayList<>();
+
+			for (long[] array1D : array2D) {
+				List<Integer> list1D = new ArrayList<>();
+
+				for (long element : array1D) {
+					list1D.add((int) element);
+				}
+
+				list2D.add(list1D);
+			}
+
+			list3D.add(list2D);
+		}
+
+		long maxAL = Long.MIN_VALUE;
+		String maxALIndex = "";
+
+		for (int x = 0; x < list3D.size(); x++) {
+			for (int y = 0; y < list3D.get(x).size(); y++) {
+				for (int z = 0; z < list3D.get(x).get(y).size(); z++) {
+
+					int val = list3D.get(x).get(y).get(z);
+
+					if (val > maxAL) {
+						maxAL = val;
+						maxALIndex = String.format("[%d][%d][%d]", x, y, z);
+					}
+
+					System.out.println("[" + x + "][" + y + "][" + z + "] = " + val);
+				}
+			}
+		}
+
+		System.out.println("ArrayListで最大値は" + maxALIndex + "にいる" + maxAL + "です。");
+
+		List<List<List<Long>>> link3D = new LinkedList<>();
+
+		long maxLL = Long.MIN_VALUE;
+		
+		for (long[][] array2D : array3D) {
+			List<List<Long>> link2D = new LinkedList<>();
+			for (long[] array1D : array2D) {
+				List<Long> link1D = new LinkedList<>();
+				for (long arrayEle : array1D) {
+					link1D.add(arrayEle);
+				}
+				
+					for (long Temp :link1D) {
+						if(Temp>maxLL) {maxLL=Temp;}
+					
+				}
+				
+				link2D.add(link1D);
+			}
+			
+
+			
+			link3D.add(link2D);
+		}
+		
+		System.out.println("LinkedListで最大値は" + maxLL + "です。");
+
+
+
+	}
+}
+</code></pre>
+
+
+<a href="#menu">Back to menu</a>
+
+  </body>
+</html>

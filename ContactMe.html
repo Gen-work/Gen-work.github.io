@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact me &middot; Gen'work</title>
+    <link rel="stylesheet" href="./css/onlycss.css" type="text/css" />
+
+
+    <style>
+
+   </style>
+      
+</head>
+      
+        <body>
+          <div id="navigation">
+            <a href="./index.html"> <img src="./Images/GenChoLogoSample.png" alt="Gen'work" width="88" height="88" align="middle"/>  </a>
+            <div class="nav-links">
+              <a href="./AboutMe.html">About me</a> &middot;
+              <a href="./MyWork.html">My work</a> &middot;
+              <a href="./SideWork.html">Side work</a> &middot;
+              <a href="./ContactMe.html">Contact me</a>
+            </div>
+          </div>
+
+    <style>
+        table {
+         table-layout: fixed;
+         width: 300px;  /* 硬性总宽度 */
+         margin: auto;
+          border: 0px solid black;
+          border-collapse: collapse;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        th, td {
+          border: 0px solid gray;
+          width: 150px;
+          height: 80px;
+          text-align: center;
+          vertical-align: middle;
+        }
+      </style>
+
+    <script>
+        function openPopup() {
+        window.open(
+        './Images/WCQR.jpg',     // 图片路径
+        'My WeChat QR Code',             // 新窗口的名字（可任意）
+        'width=400,height=400,left=300,top=100'  // 窗口尺寸和位置
+      );
+        }
+     </script>
+
+    <table align="middle" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr> 
+            <th colspan="2" align="middle">
+                <font  size="6">Contact me</font>
+            <hr/>
+            </th>
+        <tr> 
+            <td style="border-bottom: 1px solid black;"> 
+                <img src="./Images/MyEmail.png" size="100" height="100" alt="My email" align="middle"> 
+                
+            </td>
+            <td style="border-bottom: 1px solid black;"> 
+                <a href="mailto:cho@genn.work">cho@genn.work</a> 
+                
+            </td> 
+ 
+        </tr>
+        <tr> 
+            <td style="border-bottom: 1px solid black;"> 
+                <img src="./Images/MyWC.png" size="100" height="100" alt="My email" align="middle"> 
+            </td>
+            <td style="border-bottom: 1px solid black;"> 
+                WeChatID:<br/>Anti-distopia<br/>
+                <button onclick="openPopup()">QR Code</button>
+
+            </td> 
+ 
+        </tr>
+        <tr> 
+            <td style="border-bottom: 1px solid black;"> 
+                <img src="./Images/MyGitHub.png" size="100" height="100" alt="My email" align="middle"> 
+            </td>
+            <td style="border-bottom: 1px solid black;"> 
+                <a href="https://github.com/Gen-work/Gen-work.github.io">My GitHub</a> 
+            </td> 
+ 
+        </tr>
+        <tr> 
+            <td colspan="2" align="middle"> 
+                <p>Looking forward to hearing from you!</p>
+            <hr>
+            </td>
+        </tr>
+        <tr> 
+            <td colspan="2" align="middle"> 
+                <p class="clickable" onclick="toggleForm()"><strong><u></strong><font color="#4183c4" >⌵ Or click here to leave me a massage. ⌵</font></u></strong></p>
+                
+            </td>
+        </tr>
+    </table>
+
+
+
+
+    <div id="myForm">
+        <form align="middle">
+          <label for="name">Name/prounace:</label><br>
+          <input type="text" id="name" name="name"/><br><br>
+          <label for="contact">Contact:</label><br>
+          <input type="text" id="contact" name="contact"><br><br>
+          <label for="massage">Massage:</label><br>
+          <textarea id="massage" name="massage">haven't implement</textarea>
+          <br><br>
+          <button type="submit">Send</button>
+          <button type="reset">Reset</button>
+        </form>
+      </div>
+    
+      <script>
+        function toggleForm() {
+          const formDiv = document.getElementById("myForm");
+          formDiv.style.display = (formDiv.style.display === "none") ? "block" : "none";
+        }
+      </script>
+    
+
+
+
+</html>
