@@ -13,9 +13,10 @@ a:hover { text-decoration: underline; }
 #navigation {
     display: flex;              /* 使用 Flex 布局，让子元素水平排列 */
     align-items: center;        /* 垂直方向居中对齐 */
-    justify-content: space-between; /* 两端对齐，logo 在左，链接在右 */
     padding: 10px 20px;         /* 上下 10px，左右 20px 的内边距 */
     background-color: #f1f1f1;  /* 导航栏背景色 */
+    gap: 2em;                   /* 图片和链接之间的间距 */
+
   }
 
   /* 导航栏里的 logo 图片 */
@@ -29,9 +30,6 @@ a:hover { text-decoration: underline; }
   .nav-links {
     display: flex;              /* 内部使用 Flex 排列链接 */
     gap: 1em;                   /* 每个链接之间的间距 */
-    max-width: 500px;           /* 链接区域最大宽度不超过 600px */
-    flex: 1;                    /* 让链接区域尽可能占据剩余空间 */
-    justify-content: flex-start; /* 链接在右边排列 */
   }
 
   /* 每一个链接的样式 */
