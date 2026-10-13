@@ -1,77 +1,145 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'">
-    <title>Site found &middot; But here is nothing...</title>
-    <style type="text/css" media="screen">
-      body {
-        background-color: #f1f1f1;
-        margin: 0;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      }
-
-      .container { margin: 50px auto 40px auto; width: 600px; text-align: center; }
-
-      a { color: #4183c4; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-
-      h1 { width: 800px; position:relative; left: -100px; letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin: 0px 0 50px 0; text-shadow: 0 1px 0 #fff; }
-      p { color: rgba(0, 0, 0, 0.5); margin: 20px 0; line-height: 1.6; }
-
-      ul { list-style: none; margin: 25px 0; padding: 0; }
-      li { display: table-cell; font-weight: bold; width: 1%; }
-
-      .logo { display: inline-block; margin-top: 35px; }
-      .logo-img-2x { display: none; }
-    
-
-      #suggestions {
-        margin-top: 35px;
-        color: #ccc;
-      }
-      #suggestions a {
-        color: #666666;
-        font-weight: 200;
-        font-size: 14px;
-        margin: 0 10px;
-      }
-
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="home.title">Gen'work · Home</title>
+    <meta name="description" content="Gen Cho's work homepage: business-systems engineer in Japan, personal projects, and how to get in touch.">
+    <meta property="og:title" content="Gen'work · Home">
+    <meta property="og:description" content="Gen Cho's work homepage: business-systems engineer in Japan, personal projects, and how to get in touch.">
+    <meta property="og:image" content="https://genn.work/Images/GenChoLogoSample.png">
+    <meta name="theme-color" content="#f6f8fa">
+    <link rel="icon" href="./Images/GenChoLogoSample.png" type="image/png">
+    <link rel="stylesheet" href="./css/site.css">
   </head>
-  <body>
-
-    <div class="container">
-
-      <h1>Hello World</h1>
-      <p><strong>Here is my homepage.</strong></p>
-
-      <p>
-        I copyed a GitHub 404 page, haven't 
-        <a href="https://help.github.com/pages/">read the full documentation</a>
-      </br>to learn how to set up <strong>GitHub Pages</strong>. But it was fun.
-      </p>
-
-
-
-      <div id="suggestions">
-        <a href="./AboutMe.html">About me</a> &mdash;
-        <a href="./MyWork.html">My work</a> &mdash;
-        <a href="./SideWork.html">Side work</a> &mdash;
-        <a href="./ContactMe.html">Contact me</a>
+  <body data-page="home">
+    <a class="visually-hidden" href="#main" data-i18n="nav.skip">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="./index.html">
+          <img src="./Images/GenChoLogoSample.png" width="44" height="44" alt="Gen'work logo: the letters G-e-n with a butterfly">
+          <span>Gen'work</span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <a href="./index.html" data-nav="home" data-i18n="nav.home">Home</a>
+          <a href="./AboutMe.html" data-nav="about" data-i18n="nav.about">About</a>
+          <a href="./MyWork.html" data-nav="work" data-i18n="nav.work">Work</a>
+          <a href="./Hobby.html" data-nav="hobby" data-i18n="nav.hobby">Hobby</a>
+          <a href="./ContactMe.html" data-nav="contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.label">
+          <button type="button" data-lang="zh" lang="zh-Hans" aria-pressed="false">中文</button>
+          <button type="button" data-lang="ja" lang="ja" aria-pressed="false">日本語</button>
+          <button type="button" data-lang="en" lang="en" aria-pressed="false">English</button>
+        </div>
       </div>
+    </header>
 
-  <br>
+    <main id="main">
+      <div class="wrap">
 
-    <img 
-    width="88"
-    height="88"
-    title="BackToHomePage"
-    alt="A logo combining the letters G-e-n and a butterfly icon."
-    src="./Images/GenChoLogoSample.png"/>
+        <section class="hero">
+          <div class="hero-logo">
+            <img src="./Images/GenChoLogoSample.png" width="160" height="160" alt="A logo combining the letters G-e-n and a butterfly icon.">
+          </div>
+          <div>
+            <h1 data-i18n="home.h1">Hello World</h1>
+            <p class="muted" data-i18n="home.sub">Here is my homepage.</p>
+            <p class="intro" data-i18n="home.intro"></p>
+            <div class="btn-row">
+              <a class="btn primary" href="./MyWork.html" data-i18n="home.cta.work">See my work</a>
+              <a class="btn" href="./AboutMe.html" data-i18n="home.cta.about">About me</a>
+              <a class="btn" href="./ContactMe.html" data-i18n="home.cta.contact">Contact</a>
+            </div>
+          </div>
+        </section>
 
+        <section class="section" aria-labelledby="home-projects">
+          <div class="section-head">
+            <h2 id="home-projects" data-i18n="home.projects.h2">Selected projects</h2>
+            <a class="more" href="./MyWork.html#projects" data-i18n="home.projects.more">All projects and demos →</a>
+          </div>
+          <div class="grid cols-3">
+          <article class="card project-card">
+            <div class="tag-row"><span class="tag ok" data-i18n="proj.ebidensu.tag"></span></div>
+            <h3><a href="./MyWork.html#ebidensu" translate="no">ebidensu</a></h3>
+            <p class="desc" data-i18n="proj.ebidensu.short"></p>
+            <div class="tech" translate="no">PowerShell 5.1 · Excel COM · OCR · JSON workflows</div>
+            <div class="links">
+              <a href="./MyWork.html#ebidensu" data-i18n="proj.link.detail">Details &amp; demo</a>
+              <a href="https://github.com/Gen-work/ebidensu" rel="noopener" data-i18n="proj.link.source">Source</a>
+            </div>
+          </article>
 
-    </div>
+          <article class="card project-card">
+            <div class="tag-row"><span class="tag info" data-i18n="proj.cum.tag"></span></div>
+            <h3><a href="./MyWork.html#cum" translate="no">Claude Usage Monitor</a></h3>
+            <p class="desc" data-i18n="proj.cum.short"></p>
+            <div class="tech" translate="no">Chrome / Edge · Manifest V3 · JavaScript · 8 locales</div>
+            <div class="links">
+              <a href="./MyWork.html#cum" data-i18n="proj.link.detail">Details &amp; demo</a>
+              <a href="https://github.com/Gen-work/Claude-Usage-Monitor" rel="noopener" data-i18n="proj.link.source">Source</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div class="tag-row"><span class="tag warn" data-i18n="proj.commute.tag"></span></div>
+            <h3><a href="./MyWork.html#commute" translate="no">Commute Calibrator</a></h3>
+            <p class="desc" data-i18n="proj.commute.short"></p>
+            <div class="tech" translate="no">TypeScript · PWA · IndexedDB (planned)</div>
+            <div class="links">
+              <a href="./MyWork.html#commute" data-i18n="proj.link.detail">Details &amp; demo</a>
+              <a href="https://github.com/Gen-work/commute-calibrator" rel="noopener" data-i18n="proj.link.source">Source</a>
+            </div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="home-labor">
+          <div class="section-head">
+            <h2 id="home-labor" data-i18n="home.labor.h2">Where I've worked</h2>
+            <a class="more" href="./MyWork.html#labor" data-i18n="home.labor.more">Details on the Work page →</a>
+          </div>
+          <div class="card">
+            <p data-i18n="home.labor.line"></p>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="home-entries">
+          <h2 id="home-entries" class="visually-hidden" data-i18n="home.entries.h2">Around the site</h2>
+          <div class="entry-list">
+            <a class="card" href="./AboutMe.html">
+              <h3 data-i18n="home.entry.about.h3">About</h3>
+              <p data-i18n="home.entry.about.p"></p>
+            </a>
+            <a class="card" href="./MyWork.html">
+              <h3 data-i18n="home.entry.work.h3">Work</h3>
+              <p data-i18n="home.entry.work.p"></p>
+            </a>
+            <a class="card" href="./ContactMe.html">
+              <h3 data-i18n="home.entry.contact.h3">Contact</h3>
+              <p data-i18n="home.entry.contact.p"></p>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div>© <span translate="no">Gen'work</span> · <span data-i18n="footer.line">Hand-written HTML, CSS and JS since the training days.</span></div>
+        <nav aria-label="Footer">
+          <a href="./AboutMe.html" data-i18n="nav.about">About</a>
+          <a href="./MyWork.html" data-i18n="nav.work">Work</a>
+          <a href="./Hobby.html" data-i18n="nav.hobby">Hobby</a>
+          <a href="./ContactMe.html" data-i18n="nav.contact">Contact</a>
+          <a href="https://github.com/Gen-work/Gen-work.github.io" data-i18n="footer.source">Source of this site</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="./js/i18n.js"></script>
+    <script src="./js/site.js"></script>
   </body>
 </html>
