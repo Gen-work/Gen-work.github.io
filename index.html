@@ -4,140 +4,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title data-i18n="home.title">Gen'work · Home</title>
-    <meta name="description" content="Gen Cho's work homepage: business-systems engineer in Japan, personal projects, and how to get in touch.">
-    <meta property="og:title" content="Gen'work · Home">
-    <meta property="og:description" content="Gen Cho's work homepage: business-systems engineer in Japan, personal projects, and how to get in touch.">
+    <meta name="description" content="Gen Cho's homepage: business-systems engineer in Japan.">
+    <meta property="og:title" content="Gen'work">
+    <meta property="og:description" content="Gen Cho's homepage: business-systems engineer in Japan.">
     <meta property="og:image" content="https://genn.work/Images/GenChoLogoSample.png">
-    <meta name="theme-color" content="#f6f8fa">
+    <meta name="theme-color" content="#f1f1f1">
     <link rel="icon" href="./Images/GenChoLogoSample.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&amp;family=IBM+Plex+Sans+JP:wght@300;400;600&amp;family=IBM+Plex+Sans:wght@300;400;500;600&amp;family=Michroma&amp;family=Playfair+Display:wght@500&amp;family=Space+Grotesk:wght@500&amp;family=VT323&amp;display=swap">
     <link rel="stylesheet" href="./css/site.css">
   </head>
-  <body data-page="home">
-    <a class="visually-hidden" href="#main" data-i18n="nav.skip">Skip to content</a>
-    <header class="site-header">
-      <div class="wrap">
-        <a class="brand" href="./index.html">
-          <img src="./Images/GenChoLogoSample.png" width="44" height="44" alt="Gen'work logo: the letters G-e-n with a butterfly">
-          <span>Gen'work</span>
-        </a>
-        <nav class="nav" aria-label="Main">
-          <a href="./index.html" data-nav="home" data-i18n="nav.home">Home</a>
-          <a href="./AboutMe.html" data-nav="about" data-i18n="nav.about">About</a>
-          <a href="./MyWork.html" data-nav="work" data-i18n="nav.work">Work</a>
-          <a href="./Hobby.html" data-nav="hobby" data-i18n="nav.hobby">Hobby</a>
-          <a href="./ContactMe.html" data-nav="contact" data-i18n="nav.contact">Contact</a>
-        </nav>
-        <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.label">
-          <button type="button" data-lang="zh" lang="zh-Hans" aria-pressed="false">中文</button>
-          <button type="button" data-lang="ja" lang="ja" aria-pressed="false">日本語</button>
-          <button type="button" data-lang="en" lang="en" aria-pressed="false">English</button>
-        </div>
+  <body data-page="home" class="welcome">
+    <main class="welcome-main">
+      <h1 class="hello" aria-label="Hello World"><span aria-hidden="true" class="h-crt">Hel</span><span aria-hidden="true" class="h-serif">lo</span><span aria-hidden="true" class="h-sans"> Wo</span><span aria-hidden="true" class="h-future">rld</span></h1>
+
+      <p class="welcome-text"><strong data-i18n="home.sub">Here is my homepage.</strong></p>
+      <p class="welcome-text" data-i18n="home.intro">厳暢 (Gen Cho). Software engineer, business systems, Japan.</p>
+
+      <div class="lang-ring" role="group" aria-label="Language / 语言 / 言語">
+        <svg class="ring-arc" aria-hidden="true" width="232" height="154" viewBox="0 0 232 154"><path d="M 55.4 62.9 A 62 62 0 0 0 176.6 62.9" fill="none" stroke="#cfd4d9" stroke-width="1" stroke-linecap="round" stroke-dasharray="1 6"></path></svg>
+        <img class="ring-logo" src="./Images/GenChoLogoSample.png" width="96" height="96" alt="A logo combining the letters G-e-n and a butterfly icon.">
+        <button type="button" class="ring-lang ring-en" data-lang="en" lang="en" aria-label="English" aria-pressed="false"><span class="mark" aria-hidden="true">Aa</span></button>
+        <button type="button" class="ring-lang ring-zh" data-lang="zh" lang="zh-Hans" aria-label="中文(简体)" aria-pressed="false"><span class="mark" aria-hidden="true">中<small>简</small></span></button>
+        <button type="button" class="ring-lang ring-ja" data-lang="ja" lang="ja" aria-label="日本語" aria-pressed="false"><span class="mark" aria-hidden="true">日<small>あ</small></span></button>
       </div>
-    </header>
 
-    <main id="main">
-      <div class="wrap">
-
-        <section class="hero">
-          <div class="hero-logo">
-            <img src="./Images/GenChoLogoSample.png" width="160" height="160" alt="A logo combining the letters G-e-n and a butterfly icon.">
-          </div>
-          <div>
-            <h1 data-i18n="home.h1">Hello World</h1>
-            <p class="muted" data-i18n="home.sub">Here is my homepage.</p>
-            <p class="intro" data-i18n="home.intro"></p>
-            <div class="btn-row">
-              <a class="btn primary" href="./MyWork.html" data-i18n="home.cta.work">See my work</a>
-              <a class="btn" href="./AboutMe.html" data-i18n="home.cta.about">About me</a>
-              <a class="btn" href="./ContactMe.html" data-i18n="home.cta.contact">Contact</a>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" aria-labelledby="home-projects">
-          <div class="section-head">
-            <h2 id="home-projects" data-i18n="home.projects.h2">Selected projects</h2>
-            <a class="more" href="./MyWork.html#projects" data-i18n="home.projects.more">All projects and demos →</a>
-          </div>
-          <div class="grid cols-3">
-          <article class="card project-card">
-            <div class="tag-row"><span class="tag ok" data-i18n="proj.ebidensu.tag"></span></div>
-            <h3><a href="./MyWork.html#ebidensu" translate="no">ebidensu</a></h3>
-            <p class="desc" data-i18n="proj.ebidensu.short"></p>
-            <div class="tech" translate="no">PowerShell 5.1 · Excel COM · OCR · JSON workflows</div>
-            <div class="links">
-              <a href="./MyWork.html#ebidensu" data-i18n="proj.link.detail">Details &amp; demo</a>
-              <a href="https://github.com/Gen-work/ebidensu" rel="noopener" data-i18n="proj.link.source">Source</a>
-            </div>
-          </article>
-
-          <article class="card project-card">
-            <div class="tag-row"><span class="tag info" data-i18n="proj.cum.tag"></span></div>
-            <h3><a href="./MyWork.html#cum" translate="no">Claude Usage Monitor</a></h3>
-            <p class="desc" data-i18n="proj.cum.short"></p>
-            <div class="tech" translate="no">Chrome / Edge · Manifest V3 · JavaScript · 8 locales</div>
-            <div class="links">
-              <a href="./MyWork.html#cum" data-i18n="proj.link.detail">Details &amp; demo</a>
-              <a href="https://github.com/Gen-work/Claude-Usage-Monitor" rel="noopener" data-i18n="proj.link.source">Source</a>
-            </div>
-          </article>
-
-          <article class="card project-card">
-            <div class="tag-row"><span class="tag warn" data-i18n="proj.commute.tag"></span></div>
-            <h3><a href="./MyWork.html#commute" translate="no">Commute Calibrator</a></h3>
-            <p class="desc" data-i18n="proj.commute.short"></p>
-            <div class="tech" translate="no">TypeScript · PWA · IndexedDB (planned)</div>
-            <div class="links">
-              <a href="./MyWork.html#commute" data-i18n="proj.link.detail">Details &amp; demo</a>
-              <a href="https://github.com/Gen-work/commute-calibrator" rel="noopener" data-i18n="proj.link.source">Source</a>
-            </div>
-          </article>
-
-          </div>
-        </section>
-
-        <section class="section" aria-labelledby="home-labor">
-          <div class="section-head">
-            <h2 id="home-labor" data-i18n="home.labor.h2">Where I've worked</h2>
-            <a class="more" href="./MyWork.html#labor" data-i18n="home.labor.more">Details on the Work page →</a>
-          </div>
-          <div class="card">
-            <p data-i18n="home.labor.line"></p>
-          </div>
-        </section>
-
-        <section class="section" aria-labelledby="home-entries">
-          <h2 id="home-entries" class="visually-hidden" data-i18n="home.entries.h2">Around the site</h2>
-          <div class="entry-list">
-            <a class="card" href="./AboutMe.html">
-              <h3 data-i18n="home.entry.about.h3">About</h3>
-              <p data-i18n="home.entry.about.p"></p>
-            </a>
-            <a class="card" href="./MyWork.html">
-              <h3 data-i18n="home.entry.work.h3">Work</h3>
-              <p data-i18n="home.entry.work.p"></p>
-            </a>
-            <a class="card" href="./ContactMe.html">
-              <h3 data-i18n="home.entry.contact.h3">Contact</h3>
-              <p data-i18n="home.entry.contact.p"></p>
-            </a>
-          </div>
-        </section>
-      </div>
+      <nav class="welcome-nav" aria-label="Main">
+        <a href="./AboutMe.html" data-i18n="nav.about">About</a><span aria-hidden="true">—</span>
+        <a href="./MyWork.html" data-i18n="nav.work">Work</a><span aria-hidden="true">—</span>
+        <a href="./Hobby.html" data-i18n="nav.hobby">Hobby</a><span aria-hidden="true">—</span>
+        <a href="./ContactMe.html" data-i18n="nav.contact">Contact</a>
+      </nav>
     </main>
-
-    <footer class="site-footer">
-      <div class="wrap">
-        <div>© <span translate="no">Gen'work</span> · <span data-i18n="footer.line">Hand-written HTML, CSS and JS since the training days.</span></div>
-        <nav aria-label="Footer">
-          <a href="./AboutMe.html" data-i18n="nav.about">About</a>
-          <a href="./MyWork.html" data-i18n="nav.work">Work</a>
-          <a href="./Hobby.html" data-i18n="nav.hobby">Hobby</a>
-          <a href="./ContactMe.html" data-i18n="nav.contact">Contact</a>
-          <a href="https://github.com/Gen-work/Gen-work.github.io" data-i18n="footer.source">Source of this site</a>
-        </nav>
-      </div>
-    </footer>
 
     <script src="./js/i18n.js"></script>
     <script src="./js/site.js"></script>

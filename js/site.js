@@ -71,7 +71,7 @@
         if (kv.length === 2) el.setAttribute(kv[0].trim(), t(kv[1].trim()));
       }
     }
-    var buttons = document.querySelectorAll(".lang-switch button[data-lang]");
+    var buttons = document.querySelectorAll("button[data-lang]");
     for (i = 0; i < buttons.length; i++) {
       var b = buttons[i];
       var on = b.getAttribute("data-lang") === lang;
@@ -81,7 +81,7 @@
   }
 
   function initLangSwitch() {
-    var buttons = document.querySelectorAll(".lang-switch button[data-lang]");
+    var buttons = document.querySelectorAll("button[data-lang]");
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].addEventListener("click", function () {
         applyLang(this.getAttribute("data-lang"), true);

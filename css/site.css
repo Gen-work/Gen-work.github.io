@@ -24,10 +24,9 @@
   --radius: 8px;
   --radius-lg: 12px;
   --maxw: 1012px;
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial,
-    "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Noto Sans JP",
-    "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --font: "IBM Plex Sans", "IBM Plex Sans JP", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans CJK SC", -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -415,3 +414,62 @@ dialog.qr .btn { margin-top: 12px; }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: 4px 14px; }
 .site-footer a { color: var(--muted); }
 .site-footer a:hover { color: var(--link); }
+
+/* ---------- 首页:欢迎页(原版结构,GitHub 404 风格) ---------- */
+body.welcome { background: #f1f1f1; color: #24292f; }
+.welcome-main {
+  flex: 1;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 16px;
+  text-align: center;
+}
+.welcome a { color: #666666; }
+.welcome a:hover { color: #4a77a8; }
+
+/* Hello World:从左到右 CRT → 印刷衬线 → 现代无衬线 → 未来极简 */
+.hello {
+  margin: 0 0 36px;
+  font-size: clamp(52px, 10vw, 104px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: #24292f;
+  text-shadow: 0 1px 0 #ffffff;
+  white-space: nowrap;
+}
+.h-crt { font-family: "VT323", ui-monospace, monospace; font-size: 1.24em; letter-spacing: 0.02em;
+  text-shadow: 0 0 2px rgba(36, 41, 47, 0.35), 0 0 12px rgba(36, 41, 47, 0.18); }
+.h-serif { font-family: "Playfair Display", Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
+.h-sans { font-family: "Space Grotesk", "IBM Plex Sans", sans-serif; font-weight: 500; letter-spacing: -0.04em; }
+.h-future { font-family: "Michroma", "IBM Plex Sans", sans-serif; font-size: 0.7em; letter-spacing: 0.08em; color: #3d4450; margin-left: 0.04em; }
+
+.welcome-text { margin: 0 0 6px; color: #666666; font-size: 16px; }
+
+/* 语言:三个文字浮在 logo 下半圈外侧(坐标按 96px logo 计算) */
+.lang-ring { position: relative; width: 232px; height: 154px; margin-top: 26px; flex: 0 0 auto; }
+.ring-arc { position: absolute; left: 0; top: 0; overflow: visible; }
+.ring-logo { position: absolute; left: 68px; top: 2px; width: 96px; height: 96px; }
+.ring-lang {
+  position: absolute; width: 44px; height: 44px; padding: 0; border: 0; background: transparent;
+  display: flex; align-items: center; justify-content: center;
+  font: inherit; font-size: 17px; line-height: 1; color: #707070; cursor: pointer;
+  animation: gw-float 4.5s ease-in-out infinite;
+}
+.ring-lang:hover { color: #24292f; }
+.ring-lang .mark { padding-bottom: 3px; border-bottom: 1px solid transparent; text-shadow: 0 1px 0 #ffffff; }
+.ring-lang small { font-size: 0.58em; margin-left: 1px; position: relative; top: 0.3em; }
+.ring-lang[aria-pressed="true"] { color: #24292f; }
+.ring-lang[aria-pressed="true"] .mark { border-bottom-color: #7d9cc4; }
+.ring-en { left: 24.5px; top: 71.5px; animation-delay: 0s; }
+.ring-zh { left: 94px; top: 110px; animation-delay: 1.3s; }
+.ring-ja { left: 163.5px; top: 71.5px; animation-delay: 2.6s; }
+@keyframes gw-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+
+.welcome-nav { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0 4px; margin-top: 12px; font-size: 15px; font-weight: 300; }
+.welcome-nav a { padding: 12px 8px; }
+.welcome-nav span { color: #bbbbbb; }
