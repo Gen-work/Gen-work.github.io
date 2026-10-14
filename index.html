@@ -1,77 +1,44 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'">
-    <title>Site found &middot; But here is nothing...</title>
-    <style type="text/css" media="screen">
-      body {
-        background-color: #f1f1f1;
-        margin: 0;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      }
-
-      .container { margin: 50px auto 40px auto; width: 600px; text-align: center; }
-
-      a { color: #4183c4; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-
-      h1 { width: 800px; position:relative; left: -100px; letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin: 0px 0 50px 0; text-shadow: 0 1px 0 #fff; }
-      p { color: rgba(0, 0, 0, 0.5); margin: 20px 0; line-height: 1.6; }
-
-      ul { list-style: none; margin: 25px 0; padding: 0; }
-      li { display: table-cell; font-weight: bold; width: 1%; }
-
-      .logo { display: inline-block; margin-top: 35px; }
-      .logo-img-2x { display: none; }
-    
-
-      #suggestions {
-        margin-top: 35px;
-        color: #ccc;
-      }
-      #suggestions a {
-        color: #666666;
-        font-weight: 200;
-        font-size: 14px;
-        margin: 0 10px;
-      }
-
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="home.title">Gen'work · Home</title>
+    <meta name="description" content="Gen Cho's homepage: business-systems engineer in Japan.">
+    <meta property="og:title" content="Gen'work">
+    <meta property="og:description" content="Gen Cho's homepage: business-systems engineer in Japan.">
+    <meta property="og:image" content="https://genn.work/Images/GenChoLogoSample.png">
+    <meta name="theme-color" content="#f1f1f1">
+    <link rel="icon" href="./Images/GenChoLogoSample.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&amp;family=IBM+Plex+Sans+JP:wght@300;400;600&amp;family=IBM+Plex+Sans:wght@300;400;500;600&amp;family=Michroma&amp;family=Playfair+Display:wght@500&amp;family=Space+Grotesk:wght@500&amp;family=VT323&amp;display=swap">
+    <link rel="stylesheet" href="./css/site.css">
   </head>
-  <body>
+  <body data-page="home" class="welcome">
+    <main class="welcome-main">
+      <h1 class="hello" aria-label="Hello World"><span aria-hidden="true" class="h-crt">Hel</span><span aria-hidden="true" class="h-serif">lo</span><span aria-hidden="true" class="h-sans"> Wo</span><span aria-hidden="true" class="h-future">rld</span></h1>
 
-    <div class="container">
+      <p class="welcome-text"><strong data-i18n="home.sub">Here is my homepage.</strong></p>
+      <p class="welcome-text" data-i18n="home.intro">厳暢 (Gen Cho). Software engineer, business systems, Japan.</p>
 
-      <h1>Hello World</h1>
-      <p><strong>Here is my homepage.</strong></p>
-
-      <p>
-        I copyed a GitHub 404 page, haven't 
-        <a href="https://help.github.com/pages/">read the full documentation</a>
-      </br>to learn how to set up <strong>GitHub Pages</strong>. But it was fun.
-      </p>
-
-
-
-      <div id="suggestions">
-        <a href="./AboutMe.html">About me</a> &mdash;
-        <a href="./MyWork.html">My work</a> &mdash;
-        <a href="./SideWork.html">Side work</a> &mdash;
-        <a href="./ContactMe.html">Contact me</a>
+      <div class="lang-ring" role="group" aria-label="Language / 语言 / 言語">
+        <svg class="ring-arc" aria-hidden="true" width="232" height="154" viewBox="0 0 232 154"><path d="M 55.4 62.9 A 62 62 0 0 0 176.6 62.9" fill="none" stroke="#cfd4d9" stroke-width="1" stroke-linecap="round" stroke-dasharray="1 6"></path></svg>
+        <img class="ring-logo" src="./Images/GenChoLogoSample.png" width="96" height="96" alt="A logo combining the letters G-e-n and a butterfly icon.">
+        <button type="button" class="ring-lang ring-en" data-lang="en" lang="en" aria-label="English" aria-pressed="false"><span class="mark" aria-hidden="true">Aa</span></button>
+        <button type="button" class="ring-lang ring-zh" data-lang="zh" lang="zh-Hans" aria-label="中文(简体)" aria-pressed="false"><span class="mark" aria-hidden="true">中<small>简</small></span></button>
+        <button type="button" class="ring-lang ring-ja" data-lang="ja" lang="ja" aria-label="日本語" aria-pressed="false"><span class="mark" aria-hidden="true">日<small>あ</small></span></button>
       </div>
 
-  <br>
+      <nav class="welcome-nav" aria-label="Main">
+        <a href="./AboutMe.html" data-i18n="nav.about">About</a><span aria-hidden="true">—</span>
+        <a href="./MyWork.html" data-i18n="nav.work">Work</a><span aria-hidden="true">—</span>
+        <a href="./Hobby.html" data-i18n="nav.hobby">Hobby</a><span aria-hidden="true">—</span>
+        <a href="./ContactMe.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </main>
 
-    <img 
-    width="88"
-    height="88"
-    title="BackToHomePage"
-    alt="A logo combining the letters G-e-n and a butterfly icon."
-    src="./Images/GenChoLogoSample.png"/>
-
-
-    </div>
+    <script src="./js/i18n.js"></script>
+    <script src="./js/site.js"></script>
   </body>
 </html>

@@ -1,44 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>About me &middot; Gen'work</title>
-    <link rel="stylesheet" href="./css/onlycss.css" type="text/css" />
-
-    <style>
-
-    </style>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="about.title">About · Gen'work</title>
+    <meta name="description" content="Who Gen Cho is now, and the training-era version of this page kept as it was.">
+    <meta property="og:title" content="About · Gen'work">
+    <meta property="og:description" content="Who Gen Cho is now, and the training-era version of this page kept as it was.">
+    <meta property="og:image" content="https://genn.work/Images/GenChoLogoSample.png">
+    <meta name="theme-color" content="#f6f8fa">
+    <link rel="icon" href="./Images/GenChoLogoSample.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&amp;family=IBM+Plex+Sans+JP:wght@400;600&amp;family=IBM+Plex+Sans:wght@300;400;500;600&amp;display=swap">
+    <link rel="stylesheet" href="./css/site.css">
   </head>
-
-  <body>
-    <div id="navigation">
-      <a href="./index.html"> <img src="./Images/GenChoLogoSample.png" alt="Gen'work" width="88" height="88" align="middle"/>  </a>
-      <div class="nav-links">
-        <a href="./AboutMe.html">About me</a> &middot;
-        <a href="./MyWork.html">My work</a> &middot;
-        <a href="./SideWork.html">Side work</a> &middot;
-        <a href="./ContactMe.html">Contact me</a>
+  <body data-page="about">
+    <a class="visually-hidden" href="#main" data-i18n="nav.skip">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="./index.html">
+          <img src="./Images/GenChoLogoSample.png" width="44" height="44" alt="Gen'work logo: the letters G-e-n with a butterfly">
+          <span>Gen'work</span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <a href="./index.html" data-nav="home" data-i18n="nav.home">Home</a>
+          <a href="./AboutMe.html" data-nav="about" data-i18n="nav.about">About</a>
+          <a href="./MyWork.html" data-nav="work" data-i18n="nav.work">Work</a>
+          <a href="./Hobby.html" data-nav="hobby" data-i18n="nav.hobby">Hobby</a>
+          <a href="./ContactMe.html" data-nav="contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.label">
+          <button type="button" data-lang="zh" lang="zh-Hans" aria-pressed="false">中文</button>
+          <button type="button" data-lang="ja" lang="ja" aria-pressed="false">日本語</button>
+          <button type="button" data-lang="en" lang="en" aria-pressed="false">English</button>
+        </div>
       </div>
-    </div>
+    </header>
 
+    <main id="main">
+      <div class="wrap">
 
+        <header class="page-head">
+          <h1 data-i18n="about.h1">About me</h1>
+          <p class="lead" data-i18n="about.lead"></p>
+        </header>
 
-    <h1>&nbsp;&nbsp;&nbsp;About me</h1>
-    <figure style="float: left; margin-right: 20px;">
-        <img src="./Images/isme.png" alt="MySelfie" width="200" height="200" />
-        <figcaption style="font-style: italic; color: gray; text-align: center;"> Hi! It's me!</figcaption>
-    </figure>
-    <p>My name is <ruby><rb>厳暢</rb><rt>Yan Chang</rt></ruby>, I'm training to be a software engineer.</p>
-    <p>My hobbies are playing rhythm games, scrolling SNS and sleeping.</p>
-    <p>I'm learning Java, Database and HTML.</p>
-    <p>Looking forward to working in this field right now.</p>
+        <div class="tabs" role="tablist" aria-label="Versions of this page">
+          <button type="button" role="tab" id="tab-now" aria-controls="panel-now" aria-selected="true" data-hash="now" data-i18n="about.tab.now">Now</button>
+          <button type="button" role="tab" id="tab-training" aria-controls="panel-training" aria-selected="false" tabindex="-1" data-hash="training" data-i18n="about.tab.training">Training era</button>
+        </div>
 
-    <p>これから多言語対応のボタンを実装したいです。</p>
+        <section id="panel-now" role="tabpanel" aria-labelledby="tab-now" class="card">
+          <div class="profile">
+            <figure>
+              <img src="./Images/GenChoLogoSample.png" width="200" height="200" alt="Gen'work logo">
+              <figcaption data-i18n="about.facts.photo"></figcaption>
+            </figure>
+            <div>
+              <p class="name" data-i18n-html="about.now.name"></p>
+              <p data-i18n="about.now.p1"></p>
+              <p data-i18n-html="about.now.p2"></p>
+              <p data-i18n="about.now.p3"></p>
+              <p data-i18n-html="about.now.p4"></p>
+              <hr>
+              <dl class="facts">
+                <dt data-i18n="about.facts.base">Based in</dt><dd data-i18n="about.facts.base.v">Japan</dd>
+                <dt data-i18n="about.facts.langs">Languages</dt><dd data-i18n="about.facts.langs.v">中文 · 日本語 · English</dd>
+                <dt data-i18n="about.facts.tools">Tools I use</dt><dd data-i18n="about.facts.tools.v"></dd>
+              </dl>
+              <div class="btn-row" style="margin-top:18px">
+                <a class="btn primary" href="./MyWork.html" data-i18n="home.cta.work">See my work</a>
+                <a class="btn" href="./ContactMe.html" data-i18n="home.cta.contact">Contact</a>
+              </div>
+            </div>
+          </div>
+        </section>
 
-    <a href="./ContactMe.html">
-    <h2 align="middle">Contact me now</h2>
-    </a>
+        <section id="panel-training" role="tabpanel" aria-labelledby="tab-training" class="card" hidden>
+          <div class="archive-note"><strong data-i18n="about.archive.badge">Historical version</strong> · <span data-i18n="about.archive.note"></span></div>
+          <!-- 以下为培训时期的原文,逐字保留;不做翻译,不做修改。 -->
+          <div class="archive-body profile" lang="en" translate="no">
+            <figure>
+              <img src="./Images/isme.png" alt="MySelfie" width="200" height="200">
+              <figcaption> Hi! It's me!</figcaption>
+            </figure>
+            <div>
+              <h2>About me</h2>
+              <p>My name is <ruby><rb>厳暢</rb><rt>Yan Chang</rt></ruby>, I'm training to be a software engineer.</p>
+              <p>My hobbies are playing rhythm games, scrolling SNS and sleeping.</p>
+              <p>I'm learning Java, Database and HTML.</p>
+              <p>Looking forward to working in this field right now.</p>
+              <p lang="ja">これから多言語対応のボタンを実装したいです。</p>
+              <a class="cta" href="./ContactMe.html">Contact me now</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
 
+    <footer class="site-footer">
+      <div class="wrap">
+        <div>© <span translate="no">Gen'work</span> · <span data-i18n="footer.line">Hand-written HTML, CSS and JS since the training days.</span></div>
+        <nav aria-label="Footer">
+          <a href="./AboutMe.html" data-i18n="nav.about">About</a>
+          <a href="./MyWork.html" data-i18n="nav.work">Work</a>
+          <a href="./Hobby.html" data-i18n="nav.hobby">Hobby</a>
+          <a href="./ContactMe.html" data-i18n="nav.contact">Contact</a>
+          <a href="https://github.com/Gen-work/Gen-work.github.io" data-i18n="footer.source">Source of this site</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="./js/i18n.js"></script>
+    <script src="./js/site.js"></script>
   </body>
-
+</html>
