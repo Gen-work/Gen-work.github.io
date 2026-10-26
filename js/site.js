@@ -1,7 +1,7 @@
 /* genn.work — 站点脚本
    职责:语言切换(i18n)、导航当前页高亮、About 标签页、
         第三方嵌入的「点击再加载」、联系页二维码弹窗、Work 页两个小 demo。
-   不依赖任何库。 */
+   核心功能不依赖任何库；可选动效由 motion.js 独立处理。 */
 (function () {
   "use strict";
 
@@ -113,6 +113,7 @@
         if (panel) panel.hidden = !on;
       });
       if (focus) tab.focus();
+      document.dispatchEvent(new CustomEvent("genwork:tab", { detail: { panel: document.getElementById(tab.getAttribute("aria-controls")) } }));
       var hash = tab.getAttribute("data-hash");
       if (hash && history.replaceState) history.replaceState(null, "", "#" + hash);
     }

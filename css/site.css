@@ -458,18 +458,33 @@ body.welcome { background: #f1f1f1; color: #24292f; }
   position: absolute; width: 44px; height: 44px; padding: 0; border: 0; background: transparent;
   display: flex; align-items: center; justify-content: center;
   font: inherit; font-size: 17px; line-height: 1; color: #707070; cursor: pointer;
-  animation: gw-float 4.5s ease-in-out infinite;
 }
 .ring-lang:hover { color: #24292f; }
 .ring-lang .mark { padding-bottom: 3px; border-bottom: 1px solid transparent; text-shadow: 0 1px 0 #ffffff; }
 .ring-lang small { font-size: 0.58em; margin-left: 1px; position: relative; top: 0.3em; }
 .ring-lang[aria-pressed="true"] { color: #24292f; }
 .ring-lang[aria-pressed="true"] .mark { border-bottom-color: #7d9cc4; }
-.ring-en { left: 24.5px; top: 71.5px; animation-delay: 0s; }
-.ring-zh { left: 94px; top: 110px; animation-delay: 1.3s; }
-.ring-ja { left: 163.5px; top: 71.5px; animation-delay: 2.6s; }
-@keyframes gw-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+.ring-en { left: 24.5px; top: 71.5px; }
+.ring-zh { left: 94px; top: 110px; }
+.ring-ja { left: 163.5px; top: 71.5px; }
 
 .welcome-nav { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0 4px; margin-top: 12px; font-size: 15px; font-weight: 300; }
 .welcome-nav a { padding: 12px 8px; }
 .welcome-nav span { color: #bbbbbb; }
+
+/* ---------- 可选动效 ---------- */
+.hello > span { display: inline-block; white-space: pre; }
+.motion-toggle {
+  border: 1px solid var(--border-soft); border-radius: 999px;
+  background: transparent; color: var(--muted); font: inherit; font-size: 12px;
+  padding: 6px 12px; min-height: 36px; cursor: pointer;
+}
+.welcome .motion-toggle { margin-top: 32px; }
+.motion-toggle:hover { border-color: var(--border); color: var(--text); }
+.motion-toggle:disabled { cursor: default; opacity: .7; }
+.motion-enabled .welcome-nav a, .motion-enabled .ring-lang .mark, .motion-enabled .nav a { display: inline-block; }
+@media (max-width: 380px) { .hello { font-size: 12vw; } }
+@media (max-width: 420px) {
+  .welcome-nav { font-size: 14px; gap: 0 2px; }
+  .welcome-nav a { padding: 12px 5px; }
+}
